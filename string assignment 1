@@ -1,0 +1,212 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled11.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMy6MVE2IxQJIIyh07jp6EZ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sindhunekkanti/string-assignment/blob/master/string%20assignment%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ACcfW0f-4CzB",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "baa4dad4-6c20-48be-c1aa-759e9954eafd"
+      },
+      "source": [
+        " # Python Program to Count Total Characters in a String\n",
+        " \n",
+        "str1 = input(\"Please Enter your Own String : \")\n",
+        "total = 0\n",
+        "i = 0\n",
+        " \n",
+        "while(i < len(str1)):\n",
+        "    total = total + 1\n",
+        "    i = i + 1\n",
+        " \n",
+        "print(\"Total Number of Characters in this String = \", total)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Please Enter your Own String : Sindhu\n",
+            "Total Number of Characters in this String =  6\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ViuxWoMy6Jv0",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "88eb495e-a848-428d-931e-ae9d0b20b9d2"
+      },
+      "source": [
+        "#python program to get string from given string where all occurrences of its first char changed to $ except first char itself\n",
+        "def change_char(str1):\n",
+        "  char = str1[0]\n",
+        "  str1 = str1.replace(char, '$')\n",
+        "  str1 = char + str1[1:]\n",
+        " \n",
+        "  return str1\n",
+        " \n",
+        "print(change_char('restart'))"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "resta$t\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "B7oBrJhI8U6X",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 139
+        },
+        "outputId": "01bdaa76-0d9f-4693-85a1-2c7ee85eac9c"
+      },
+      "source": [
+        " #python function that takes list of words and returns length of longest one\n",
+        "a=[]\n",
+        "n= int(input(\"Enter the number of elements in list:\"))\n",
+        "for x in range(0,n):\n",
+        "    element=input(\"Enter element\" + str(x+1) + \":\")\n",
+        "    a.append(element)\n",
+        "max1=len(a[0])\n",
+        "temp=a[0]\n",
+        "for i in a:\n",
+        "    if(len(i)>max1):\n",
+        "       max1=len(i)\n",
+        "       temp=i\n",
+        "print(\"The word with the longest length is:\")\n",
+        "print(temp)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the number of elements in list:3\n",
+            "Enter element1:Sindhu\n",
+            "Enter element2:Is\n",
+            "Enter element3:Good\n",
+            "The word with the longest length is:\n",
+            "Sindhu\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "C90OrNrh9RFi",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        },
+        "outputId": "339d76f3-f414-4021-bd5e-1f5a20ba8a90"
+      },
+      "source": [
+        "#python program to remove nth index char from non empty string\n",
+        "def remove(string, n):  \n",
+        "      first = string[:n]   \n",
+        "      last = string[n+1:]  \n",
+        "      return first + last\n",
+        "string=input(\"Enter the sring:\")\n",
+        "n=int(input(\"Enter the index of the character to remove:\"))\n",
+        "print(\"Modified string:\")\n",
+        "print(remove(string, n))"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the sring:Sindhu\n",
+            "Enter the index of the character to remove:4\n",
+            "Modified string:\n",
+            "Sindu\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FqL4IVfz_KV_",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "49be1675-3230-4c0b-bd59-7d54f9e525c1"
+      },
+      "source": [
+        "#python program to get single string from two and seperated by space and swap first two chars\n",
+        "a=input() \n",
+        "b=input()\n",
+        "x=a[0:2]\n",
+        " \n",
+        "a=a.replace(a[0:2],b[0:2])\n",
+        " \n",
+        "b=b.replace(b[0:2],x)\n",
+        " \n",
+        "print(a,b)"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Sindhu\n",
+            "Nekkanti\n",
+            "Nendhu Sikkanti\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
